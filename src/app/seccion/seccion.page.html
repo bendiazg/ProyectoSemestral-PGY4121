@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Seccion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Código Escaneado
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ resultadoScan }}</p>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-list>
+    <ion-item *ngFor="let usuario of usuarios">
+      <ion-label>
+        <h2>{{ usuario.nombre }} {{ usuario.apellido }}</h2>
+        <p>Nivel de Educación: {{ usuario.nivelEducacion }}</p>
+        <p>Fecha de Nacimiento: {{ usuario.fechaNacimiento }}</p>
+        <ion-thumbnail>
+          <img *ngIf="usuario.photoUrl" [src]="usuario.photoUrl">
+        </ion-thumbnail>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

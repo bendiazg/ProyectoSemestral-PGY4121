@@ -1,0 +1,41 @@
+.animated-title {
+  position: relative;
+  display: block;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 1s;
+  animation-name: moveTitle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.opacity-animation {
+  animation-name: opacityAnimation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveTitle {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(50%);
+  }
+  75% {
+    transform: translateX(-50%);
+  }
+  50% {
+    opacity: 0.2;
+    transform: translateX(0);
+  }
+}
+
+@keyframes opacityAnimation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
